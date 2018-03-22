@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">FicheApp</string>
     <string name="back">Back</string>
+    <string name="exam">Exam</string>
 </resources>

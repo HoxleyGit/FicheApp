@@ -2,21 +2,21 @@
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:weightSum="20">
 
+        <!-- Texts in texts views are temporary/placeholders -->
         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="50dp"
-            android:paddingBottom="50dp"
-            android:paddingLeft="50dp"
-            android:paddingRight="35dp">
+            android:layout_height="0dp"
+            android:layout_weight="5">
             <TextView
                 android:id="@+id/current_lesson_state"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="17dp"
                 android:text="4/5"
+                android:layout_centerInParent="true"
                 android:layout_toLeftOf="@+id/current_lesson_name"
                 android:paddingRight="10dp"
                 />
@@ -25,13 +25,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="24dp"
+                android:paddingRight="20dp"
                 android:text="Typy podstawowe"
+                android:layout_centerInParent="true"
                 android:layout_alignParentRight="true"
                 />
         </RelativeLayout>
+
+        <!-- Button will be changed in future/placeholder -->
         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="3"
             android:padding="10dp" >
             <Button
                 android:layout_width="wrap_content"
@@ -39,22 +44,36 @@
                 android:text="+"
                 android:layout_centerInParent="true" />
         </RelativeLayout>
+
+        <!-- Here will be the list of buttons representing fiches -->
         <ScrollView
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <!-- Here you put the rest of your current view-->
+            android:layout_height="0dp"
+            android:layout_weight="9">
         </ScrollView>
+
+        <!-- Button will be changed in future/placeholder -->
         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentBottom="true"
-            android:paddingBottom="20dp"
-            android:paddingLeft="20dp">
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/back" />
+                android:text="@string/back"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:al="true"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:text="@string/exam"
+                />
+
         </RelativeLayout>
     </LinearLayout>
