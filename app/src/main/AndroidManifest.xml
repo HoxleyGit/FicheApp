@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".CurrentLessonActivity" />
-        <activity android:name=".NewEditFicheActivity"></activity>
+        <activity android:name=".NewEditFicheActivity" />
+        <activity android:name=".ExamQuestionActivity" />
+        <activity android:name=".ExamAnswerActivity" />
+        <activity android:name=".ExamResultActivity"></activity>
     </application>
 
 </manifest>

@@ -3,4 +3,12 @@
     <string name="app_name">FicheApp</string>
     <string name="back">Powrót</string>
     <string name="exam">Egzaminuj się</string>
+    <string name="new_edit_fiche_layout_title">Dodaj fiszkę</string>
+    <string name="fiche_question_input_text_view">Pytanie</string>
+    <string name="fiche_answer_input_text_view">Odpowiedź</string>
+    <string name="add">Dodaj</string>
+    <string name="cancel">Anuluj</string>
+    <string name="abadon">Przerwij</string>
+    <string name="result">Twój wynik</string>
+    <string name="good">Dobrze</string>
 </resources>
