@@ -1,42 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/result"
-        android:textSize="25dp"
-        android:layout_centerInParent="true"
-        android:id="@+id/result_text_view"/>
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/result_text_view"
-        android:background="@mipmap/ic_launcher_round"
-        android:id="@+id/good_answer_image"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:textSize="20dp"
-        android:layout_below="@id/bad_answer_image"
-        android:id="@+id/good_text_view"
-        android:text="@string/good"/>
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/good_text_view"
-        android:background="@mipmap/ic_launcher_round"
-        android:id="@+id/bad_answer_image"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:textSize="20dp"
-        android:layout_below="@id/good_answer_image"
-        android:text="@string/good"/>
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-</RelativeLayout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8">
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <!--Title-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/result"
+                android:textSize="25dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/result_text_view"/>
+
+            <!-- There will be a loading panel -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_below="@id/result_text_view"
+                android:layout_centerHorizontal="true"
+                android:background="@mipmap/ic_launcher_round"
+                android:id="@+id/good_answer_image"/>
+
+            <!-- To this text will be included info about % -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/good_answer_image"
+                android:textSize="20dp"
+                android:id="@+id/good_text_view"
+                android:text="@string/correct"/>
+
+            <!-- There will be a loading panel -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/good_text_view"
+                android:background="@mipmap/ic_launcher_round"
+                android:id="@+id/bad_answer_image"/>
+
+            <!-- To this text will be included info about % -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textSize="20dp"
+                android:layout_below="@id/bad_answer_image"
+                android:text="@string/wrong"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- Button will be changed in future/placeholder -->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/exit"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:text="@string/try_again"/>
+    </RelativeLayout>
+</LinearLayout>

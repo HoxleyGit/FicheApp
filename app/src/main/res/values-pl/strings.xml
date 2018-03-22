@@ -10,5 +10,8 @@
     <string name="cancel">Anuluj</string>
     <string name="abadon">Przerwij</string>
     <string name="result">Twój wynik</string>
-    <string name="good">Dobrze</string>
+    <string name="correct">Poprawnie</string>
+    <string name="wrong">Błędnie</string>
+    <string name="exit">Wyjdź</string>
+    <string name="try_again">Spróbuj ponownie</string>
 </resources>

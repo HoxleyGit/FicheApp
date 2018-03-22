@@ -9,5 +9,8 @@
     <string name="cancel">Cancel</string>
     <string name="abadon">Abadon</string>
     <string name="result">Your result</string>
-    <string name="good">Good</string>
+    <string name="correct">Correct</string>
+    <string name="wrong">Wrong</string>
+    <string name="exit">Exit</string>
+    <string name="try_again">Try again</string>
 </resources>

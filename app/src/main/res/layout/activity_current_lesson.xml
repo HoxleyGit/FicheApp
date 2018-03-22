@@ -15,7 +15,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="17dp"
-                android:text="4/5"
+                android:text="x/5"
                 android:layout_centerInParent="true"
                 android:layout_toLeftOf="@+id/current_lesson_name"
                 android:paddingRight="10dp"
@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="24dp"
                 android:paddingRight="20dp"
-                android:text="Typy podstawowe"
+                android:text="Example name of lesson"
                 android:layout_centerInParent="true"
                 android:layout_alignParentRight="true"
                 />
