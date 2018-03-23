@@ -14,15 +14,17 @@
         <activity android:name=".ExamQuestionActivity" />
         <activity android:name=".ExamAnswerActivity" />
         <activity android:name=".ExamResultActivity" />
-
-
         <activity android:name=".MenuActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".AllCategoriesActivity" />
+        <activity android:name=".AddEditCategoryActivity" />
+        <activity android:name=".AllLessonsActivity" />
+        <activity android:name=".AddEditLessonsActivity"></activity>
     </application>
 
 </manifest>
