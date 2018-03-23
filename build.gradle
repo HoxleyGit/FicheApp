@@ -16,9 +16,11 @@ buildscript {
 }
 
 allprojects {
+    String osName = System.getProperty("os.name").toLowerCase();
+
     repositories {
-        google()
         jcenter()
+        google()
     }
 }
 

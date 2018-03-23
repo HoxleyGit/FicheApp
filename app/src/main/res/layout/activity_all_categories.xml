@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.app.fiche.ficheapp.MenuActivity">
+
+    <TextView
+        android:id="@+id/textview_categories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100pt"
+        android:layout_marginTop="20pt"
+        android:text="@string/categories"
+        android:textSize="25sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/categories_image_test"
+            android:layout_width="match_parent"
+            android:layout_height="40pt"
+            android:layout_marginTop="20pt"
+            android:contentDescription="@string/app_logo"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <ImageView
+            android:id="@+id/categories_image_test2"
+            android:layout_width="match_parent"
+            android:layout_height="40pt"
+            android:layout_marginTop="20pt"
+            android:contentDescription="@string/app_logo"
+            android:src="@mipmap/ic_launcher_round" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/button_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5pt"
+            android:layout_marginRight="100pt"
+            android:layout_marginTop="120pt"
+            android:text="@string/back"
+            android:textSize="10pt" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

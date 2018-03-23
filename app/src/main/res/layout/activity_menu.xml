@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.app.fiche.ficheapp.MenuActivity">
+
+
+    <ImageView
+        android:id="@+id/Ficheapp_logo"
+        android:layout_width="match_parent"
+        android:layout_height="70pt"
+        android:layout_marginTop="200pt"
+        android:contentDescription="@string/app_logo"
+        android:src="@mipmap/ic_launcher_round" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10pt"
+            android:text="@string/start_learning"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40pt"
+            android:layout_marginRight="40pt"
+            android:layout_marginTop="90pt"
+            android:text="@string/exit"
+            android:textSize="25sp" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

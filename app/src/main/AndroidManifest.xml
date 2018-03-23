@@ -13,7 +13,9 @@
         <activity android:name=".NewEditFicheActivity" />
         <activity android:name=".ExamQuestionActivity" />
         <activity android:name=".ExamAnswerActivity" />
-        <activity android:name=".ExamResultActivity"></activity>
+        <activity android:name=".ExamResultActivity" />
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".AllCategoriesActivity"></activity>
     </application>
 
 </manifest>
