@@ -14,8 +14,8 @@ public class ExamResultActivity extends AppCompatActivity {
         setContentView(R.layout.activity_exam_result);
 
         //Button that onClick transport us to CurrentLessonActivity
-        Button exitFromExamButton = findViewById(R.id.exam_result_exit);
-        exitFromExamButton.setOnClickListener(new View.OnClickListener() {
+        Button exitFromResult = findViewById(R.id.exam_result_exit);
+        exitFromResult.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getBaseContext(), CurrentLessonActivity.class);
