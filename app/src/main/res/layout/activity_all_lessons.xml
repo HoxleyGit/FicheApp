@@ -8,47 +8,54 @@
     android:orientation="vertical"
     tools:context="com.app.fiche.ficheapp.MenuActivity">
 
+
     <TextView
         android:id="@+id/textview_categories"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="100pt"
         android:layout_marginTop="20pt"
-        android:text="@string/categories"
+        android:text="@string/lessons"
         android:textSize="25sp" />
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/categories_image_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5pt"
+                android:layout_marginTop="20pt"
+                android:contentDescription="@string/app_logo"
+                android:src="@mipmap/ic_launcher_round" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/categories_image_test"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5pt"
-            android:layout_marginTop="20pt"
-            android:contentDescription="@string/app_logo"
-            android:src="@mipmap/ic_launcher_round" />
-
-        <ImageView
-            android:id="@+id/categories_image_test2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5pt"
-            android:layout_marginTop="20pt"
-            android:layout_toRightOf="@id/categories_image_test"
-            android:contentDescription="@string/app_logo"
-            android:src="@mipmap/ic_launcher_round" />
-
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            android:layout_centerHorizontal="true"
+            android:text="W tym miejscu będzie lista" />
 
         <Button
-            android:id="@+id/button_to_menu"
+            android:id="@+id/button_to_categories"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5pt"

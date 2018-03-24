@@ -16,4 +16,9 @@
     <string name="categories">Categories</string>
     <string name="app_logo">Logo</string>
     <string name="start_learning">Start learning</string>
+    <string name="add_edit_category">Add/Edit Category</string>
+    <string name="add_name_category">Name of category</string>
+    <string name="lessons">Lessons</string>
+    <string name="add_edit_lessons">Add/Edit Lesson</string>
+    <string name="add_name_lesson">Name of lesson</string>
 </resources>

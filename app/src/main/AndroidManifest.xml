@@ -22,7 +22,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".AllCategoriesActivity" />
-
+        <activity android:name=".AddEditCategoryActivity" />
+        <activity android:name=".AllLessonsActivity" />
+        <activity android:name=".AddEditLessonsActivity"></activity>
     </application>
 
 </manifest>
