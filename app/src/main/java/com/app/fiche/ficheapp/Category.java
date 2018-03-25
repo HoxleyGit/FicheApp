@@ -2,21 +2,22 @@ package com.app.fiche.ficheapp;
 
 
 import java.util.LinkedList;
+import java.util.List;
 
 public class Category {
     private String name;
-    private LinkedList<Lesson> lessons;
+    private List<Lesson> lessons;
 
-    public Category(String name, LinkedList<Lesson> lessons) {
+    public Category (String name) {
         this.name = name;
-        this.lessons = lessons;
+        this.lessons = new LinkedList<>();
     }
 
     public String getName() {
         return name;
     }
 
-    public LinkedList<Lesson> getLessons() {
+    public List<Lesson> getLessons() {
         return lessons;
     }
 

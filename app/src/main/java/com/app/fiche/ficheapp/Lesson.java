@@ -2,17 +2,18 @@ package com.app.fiche.ficheapp;
 
 
 import java.util.LinkedList;
+import java.util.List;
 
 public class Lesson {
     private String name;
     private String desc;
-    private LinkedList<Fiche> fiches;
+    private List<Fiche> fiches;
     private Category category;
 
-    public Lesson(String name, String desc, LinkedList<Fiche> fiches, Category category) {
+    public Lesson(String name, String desc, Category category) {
         this.name = name;
         this.desc = desc;
-        this.fiches = fiches;
+        this.fiches = new LinkedList<>();
         this.category = category;
     }
 
@@ -29,7 +30,7 @@ public class Lesson {
         return category;
     }
 
-    public LinkedList<Fiche> getFiches() {
+    public List<Fiche> getFiches() {
         return fiches;
     }
 }

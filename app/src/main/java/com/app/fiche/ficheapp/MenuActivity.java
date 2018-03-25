@@ -29,7 +29,9 @@ public class MenuActivity extends AppCompatActivity {
         FicheAppDbHelper ficheAppDbHelper = new FicheAppDbHelper(getBaseContext());
         SQLiteDatabase fichedb = ficheAppDbHelper.getWritableDatabase();
         ficheAppDbHelper.onCreate(fichedb);
-        ficheAppDbHelper.addCategory(fichedb, new Category("Angielski", null));
+        ficheAppDbHelper.addCategory(fichedb, "Polski");
+        ficheAppDbHelper.addLesson(fichedb, "Przypadki", "Polski");
+        ficheAppDbHelper.addFiche(fichedb, "pytanie", "odpowiedź", "dom");
         DataRepository dataRepository = ficheAppDbHelper.transportDbToRepo(fichedb);
         Button button = findViewById(R.id.start_learning_button);
         button.setText(dataRepository.getCategories().get(0).getName());
