@@ -21,8 +21,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/categories_image_test"
+        <ImageButton
+            android:id="@+id/categories_image_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5pt"
@@ -35,8 +35,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5pt"
-            android:layout_marginTop="20pt"
-            android:layout_toRightOf="@id/categories_image_test"
+            android:layout_marginTop="25pt"
+            android:layout_toRightOf="@id/categories_image_button"
             android:contentDescription="@string/app_logo"
             android:src="@mipmap/ic_launcher_round" />
 

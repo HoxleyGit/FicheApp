@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="70pt"
         android:layout_marginTop="20pt"
-        android:text="@string/add_edit_category"
+        android:text="@string/add_edit_lessons"
         android:textSize="25sp" />
 
     <LinearLayout
@@ -25,47 +25,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/categories_image_test"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10pt"
-            android:layout_marginTop="20pt"
-            android:contentDescription="@string/app_logo"
-            android:src="@mipmap/ic_launcher_round" />
-
-        <ImageView
-            android:id="@+id/categories_image_test2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15pt"
-            android:layout_marginTop="20pt"
-            android:layout_toRightOf="@id/categories_image_test"
-            android:contentDescription="@string/app_logo"
-            android:src="@mipmap/ic_launcher_round" />
-
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
         <EditText
-            android:id="@+id/nameofcategory1"
+            android:id="@+id/nameoflesson"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
             android:layout_marginLeft="7pt"
-            android:text="@string/add_name_category"
-            android:textSize="10sp" />
+            android:layout_marginTop="40pt"
+            android:text="@string/add_name_lesson"
+            android:textSize="20sp" />
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="7pt"
-            android:layout_toRightOf="@id/nameofcategory1"
-            android:text="@string/add_name_category"
-            android:textSize="10sp" />
 
     </RelativeLayout>
 
@@ -75,7 +44,7 @@
 
 
         <Button
-            android:id="@+id/button_back_to_all_categories"
+            android:id="@+id/button_back_to_all_lessons"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5pt"
@@ -84,10 +53,10 @@
             android:textSize="10pt" />
 
         <Button
-            android:id="@+id/confirm_add_edit_category"
+            android:id="@+id/confirm_add_edit_lesson"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="80pt"
+            android:layout_marginLeft="125pt"
             android:layout_marginTop="110pt"
             android:layout_toRightOf="@id/button_back_to_all_categories"
             android:text="@string/enter"
