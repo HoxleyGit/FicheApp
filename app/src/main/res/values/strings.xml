@@ -21,4 +21,5 @@
     <string name="lessons">Lessons</string>
     <string name="add_edit_lessons">Add/Edit Lesson</string>
     <string name="add_name_lesson">Name of lesson</string>
+    <string name="no_category">Please add category first</string>
 </resources>

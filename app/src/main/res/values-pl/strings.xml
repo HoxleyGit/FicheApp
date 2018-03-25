@@ -22,4 +22,5 @@
     <string name="lessons">Lekcje</string>
     <string name="add_edit_lessons">Dodaj/Edytuj lekcję</string>
     <string name="add_name_lesson">Nazwa lekcji</string>
+    <string name="no_category">Najpierw dodaj kategorię</string>
 </resources>
