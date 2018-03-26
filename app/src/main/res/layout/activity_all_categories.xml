@@ -18,27 +18,22 @@
         android:textSize="25sp" />
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_width="wrap_content"
+        android:layout_height="460dp"
+        android:layout_marginTop="5pt">
 
-        <ImageButton
-            android:id="@+id/categories_image_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5pt"
-            android:layout_marginTop="20pt"
-            android:contentDescription="@string/app_logo"
-            android:src="@mipmap/ic_launcher_round" />
 
-        <ImageView
-            android:id="@+id/categories_image_test2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5pt"
-            android:layout_marginTop="25pt"
-            android:layout_toRightOf="@id/categories_image_button"
-            android:contentDescription="@string/app_logo"
-            android:src="@mipmap/ic_launcher_round" />
+
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_categories"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+
 
 
     </RelativeLayout>
@@ -52,11 +47,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5pt"
+            android:layout_marginTop="5pt"
             android:layout_marginRight="100pt"
-            android:layout_marginTop="120pt"
             android:text="@string/back"
             android:textSize="10pt" />
-
+        <ImageButton
+            android:id="@+id/categories_image_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="250dp"
+            android:contentDescription="@string/app_logo"
+            android:src="@mipmap/ic_launcher_round" />
 
     </RelativeLayout>
 
