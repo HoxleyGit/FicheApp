@@ -3,6 +3,7 @@ package com.app.fiche.ficheapp;
 /**
  * Created by Łukasz on 28.03.2018.
  */
+//klasa przechowuje kategorie
 
 public class CategoriesDataBase extends CategoriesStaff {
 

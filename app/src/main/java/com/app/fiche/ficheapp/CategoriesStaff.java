@@ -5,6 +5,7 @@ import java.util.ArrayList;
 /**
  * Created by Łukasz on 28.03.2018.
  */
+//klasa obsługująca listę, dodawanie, usuwanie itp
 
 public class CategoriesStaff {
 
