@@ -2,7 +2,6 @@ package com.app.fiche.ficheapp;
 
 
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -19,23 +18,22 @@ public class MenuActivity extends AppCompatActivity {
         }
     };
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
         //only for tests
-        getBaseContext().deleteDatabase("FicheApp.db");
-        FicheAppDbHelper ficheAppDbHelper = new FicheAppDbHelper(getBaseContext());
-        SQLiteDatabase fichedb = ficheAppDbHelper.getWritableDatabase();
-        ficheAppDbHelper.onCreate(fichedb);
-        ficheAppDbHelper.addCategory(fichedb, "Polski");
-        ficheAppDbHelper.addLesson(fichedb, "Przypadki", "Polski");
-        ficheAppDbHelper.addFiche(fichedb, "pytanie", "odpowiedź", "dom");
-        DataRepository dataRepository = ficheAppDbHelper.transportDbToRepo(fichedb);
-        Button button = findViewById(R.id.start_learning_button);
-        button.setText(dataRepository.getCategories().get(0).getName());
-        //tested - working a little bit
-        button.setOnClickListener(menuListiner);
+        AppDbConnector appDbConnector = new AppDbConnector(getBaseContext());
+        appDbConnector.addCategory("Angielski");
+        appDbConnector.addLesson("dom", "", appDbConnector.getDataRepository().getCategories().get(0));
+        boolean success = appDbConnector.addFiche("pytanie", "odpowiedz", appDbConnector.getDataRepository().getLessons().get(0));
+        if(success) {
+            Button button = findViewById(R.id.start_learning_button);
+            button.setText(appDbConnector.getDataRepository().getCategories().get(0).getLessons().get(0).getFiches().get(0).getAnswer());
+            //tested - working a little bit
+            button.setOnClickListener(menuListiner);
+        }
     }
 }

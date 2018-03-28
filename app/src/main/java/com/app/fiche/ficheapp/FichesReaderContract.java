@@ -26,7 +26,7 @@ public final class FichesReaderContract {
                         FichesEntry.COLUMN_NAME_ANSWER + " VARCHAR(200), " +
                         FichesEntry.COLUMN_NAME_LESSONS +
                         " REFERENCES " + FichesEntry.COLUMN_NAME_LESSONS +
-                        "("+ LessonsReaderContract.LessonsEntry.COLUMN_NAME_NAME +"))";
+                        "("+ LessonsReaderContract.LessonsEntry.COLUMN_NAME_ID +"))";
         public static final String SQL_DELETE_ENTRIES =
                 "DROP TABLE IF EXISTS " + FichesEntry.TABLE_NAME;
     }
