@@ -1,10 +1,13 @@
 package com.app.fiche.ficheapp;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -14,9 +17,10 @@ import java.util.ArrayList;
 
 class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
 
-    private ArrayList<String> categoriesDataset;
 
-    public MainAdapter(ArrayList<String> categoriesDataset) {
+    private ArrayList<CategoriesDataBase> categoriesDataset;
+
+    public MainAdapter(ArrayList<CategoriesDataBase> categoriesDataset) {
         this.categoriesDataset = categoriesDataset;
     }
 
@@ -30,9 +34,19 @@ class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(MainAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(MainAdapter.ViewHolder holder, final int position) {
 
-        holder.categoriesTitle.setText(categoriesDataset.get(position));
+        holder.categoriesTitle.setText(categoriesDataset.get(position).getName());
+        holder.categoriesRecyclerViewButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(view.getContext(), "Pozycja: " + position, Toast.LENGTH_SHORT).show();
+                if (position == 0) {
+                    Intent addEditCategory = new Intent(view.getContext(), AddEditCategoryActivity.class);
+                    view.getContext().startActivity(addEditCategory);
+                }
+            }
+        });
 
     }
 
@@ -43,11 +57,15 @@ class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
+        Button categoriesRecyclerViewButton;
+
         public TextView categoriesTitle;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            categoriesTitle = itemView.findViewById(R.id.categoriesTitle);
+            categoriesTitle = itemView.findViewById(R.id.categoriesTitleButton);
+            categoriesRecyclerViewButton = itemView.findViewById(R.id.categoriesTitleButton);
         }
+
     }
 }
