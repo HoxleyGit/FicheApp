@@ -14,17 +14,25 @@ public class AppDbConnector {
     private SQLiteDatabase db;
     private FicheAppDbHelper ficheAppDbHelper;
 
+
+
     public AppDbConnector(Context context) {
-        context.deleteDatabase("FicheApp.db");
+        //context.deleteDatabase("FicheApp.db");
         ficheAppDbHelper = new FicheAppDbHelper(context);
         db = ficheAppDbHelper.getWritableDatabase();
         ficheAppDbHelper.onCreate(db);
         refreshRepo();
+
+
+
     }
 
 
+
     public boolean addCategory(String categoryName) {
+
         return addCategory(new Category(categoryName));
+
     }
 
     /**

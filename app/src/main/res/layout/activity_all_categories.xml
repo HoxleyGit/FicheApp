@@ -51,14 +51,6 @@
             android:layout_marginRight="100pt"
             android:text="@string/back"
             android:textSize="10pt" />
-        <ImageButton
-            android:id="@+id/categories_image_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="250dp"
-            android:contentDescription="@string/app_logo"
-            android:src="@mipmap/ic_launcher_round" />
-
     </RelativeLayout>
 
 

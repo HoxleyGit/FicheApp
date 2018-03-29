@@ -7,6 +7,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -24,6 +25,8 @@ public class AllCategoriesActivity extends AppCompatActivity {
     private CategoriesStaff categoriesStaff = new CategoriesStaff();
 
 
+
+
     private View.OnClickListener backToMenu = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
@@ -32,27 +35,21 @@ public class AllCategoriesActivity extends AppCompatActivity {
             finish();
         }
     };
-    private View.OnClickListener addCategory = new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            Intent addEditCategory = new Intent(getBaseContext(), AddEditCategoryActivity.class);
-            startActivity(addEditCategory);
-            finish();
-        }
-    };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_categories);
 
+        AppDbConnector appDbConnector = new AppDbConnector(getBaseContext());
 
-        categoriesStaff.addCategory(new CategoriesDataBase("Dodaj kategorię"));
-        //na chwilę to jest
-        categoriesStaff.addCategory(new CategoriesDataBase("Dom"));
-        categoriesStaff.addCategory(new CategoriesDataBase("Angielski"));
-        categoriesStaff.addCategory(new CategoriesDataBase("Polski"));
-        categoriesStaff.addCategory(new CategoriesDataBase("Kupczeczka"));
+        categoriesStaff.addCategory(new CategoriesDataBase((getResources().getString(R.string.add_category))));
+
+        for(int i = 0; i < appDbConnector.getDataRepository().getCategories().size(); i++) {
+            categoriesStaff.addCategory(new CategoriesDataBase(appDbConnector.getDataRepository().getCategories().get(i).getName()));
+        }
+
 
         /**
          * Setting RecyclerView in activitity
@@ -73,11 +70,7 @@ public class AllCategoriesActivity extends AppCompatActivity {
         Button backButton = findViewById(R.id.button_to_menu);
         backButton.setOnClickListener(backToMenu);
 
-        final View addCategoryImage = findViewById(R.id.categories_image_button);
-        addCategoryImage.setOnClickListener(addCategory);
 
 
     }
-
-
 }

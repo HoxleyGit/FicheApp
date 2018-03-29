@@ -22,7 +22,7 @@ class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
 
     public MainAdapter(ArrayList<CategoriesDataBase> categoriesDataset) {
         this.categoriesDataset = categoriesDataset;
-    }
+}
 
     @Override
     public MainAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -42,6 +42,7 @@ class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
             public void onClick(View view) {
                 Toast.makeText(view.getContext(), "Pozycja: " + position, Toast.LENGTH_SHORT).show();
                 if (position == 0) {
+
                     Intent addEditCategory = new Intent(view.getContext(), AddEditCategoryActivity.class);
                     view.getContext().startActivity(addEditCategory);
                 }

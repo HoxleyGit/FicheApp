@@ -8,7 +8,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class AddEditCategoryActivity extends AppCompatActivity {
+
+
 
     private View.OnClickListener backToAllCategories = new View.OnClickListener() {
         @Override
@@ -44,6 +48,8 @@ public class AddEditCategoryActivity extends AppCompatActivity {
                 Toast toast = Toast.makeText(getBaseContext(), getResources().getString(R.string.no_category), Toast.LENGTH_SHORT);
                 toast.show();
             } else {
+                AppDbConnector appDbConnector = new AppDbConnector(getBaseContext());
+                appDbConnector.addCategory(categoryNameString);
                 Intent addEditCategoryIntent = new Intent(getBaseContext(), AllLessonsActivity.class);
                 startActivity(addEditCategoryIntent);
 

@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class CategoriesStaff {
 
-    private ArrayList<CategoriesDataBase> categoriesDataset;
+    private  ArrayList<CategoriesDataBase> categoriesDataset;
 
     public CategoriesStaff() {
         this.categoriesDataset = new ArrayList<>();

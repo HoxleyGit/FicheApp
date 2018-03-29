@@ -8,6 +8,7 @@ public class Category {
     private String name;
     private List<Lesson> lessons;
 
+
     public Category (String name) {
         this.name = name;
         this.lessons = new LinkedList<>();
