@@ -31,6 +31,7 @@ class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
         ViewHolder vh = new ViewHolder(v);
         return vh;
 
+
     }
 
     @Override

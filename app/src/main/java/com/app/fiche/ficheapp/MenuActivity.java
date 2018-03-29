@@ -34,7 +34,7 @@ public class MenuActivity extends AppCompatActivity {
         boolean success = appDbConnector.addFiche("pytanie", "odpowiedz", appDbConnector.getDataRepository().getLessons().get(0));
         if(success) {
             Button button = findViewById(R.id.start_learning_button);
-            button.setText(appDbConnector.getDataRepository().getCategories().get(0).getName());
+            button.setText(appDbConnector.getDataRepository().getLessons().get(0).getName());
             //tested - working a little bit
             button.setOnClickListener(menuListiner);
         }
