@@ -41,7 +41,10 @@ class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
         holder.categoriesRecyclerViewButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(view.getContext(), "Pozycja: " + position, Toast.LENGTH_SHORT).show();
+                Intent goToLessons = new Intent(view.getContext(), AllLessonsActivity.class);
+                int categoryINeed = position;
+                goToLessons.putExtra("CATEGORY", categoryINeed);
+                view.getContext().startActivity(goToLessons);
                 if (position == 0) {
 
                     Intent addEditCategory = new Intent(view.getContext(), AddEditCategoryActivity.class);

@@ -44,6 +44,7 @@ public class AllCategoriesActivity extends AppCompatActivity {
 
         AppDbConnector appDbConnector = new AppDbConnector(getBaseContext());
 
+
         categoriesStaff.addCategory(new CategoriesDataBase((getResources().getString(R.string.add_category))));
 
         for(int i = 0; i < appDbConnector.getDataRepository().getCategories().size(); i++) {

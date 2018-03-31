@@ -30,11 +30,12 @@ public class MenuActivity extends AppCompatActivity {
         appDbConnector.addCategory("Polski");
         appDbConnector.addCategory("Dom");
         appDbConnector.addCategory("Kupeczka");
-        appDbConnector.addLesson("dom", "", appDbConnector.getDataRepository().getCategories().get(0));
+
+        appDbConnector.addLesson("dom", "", appDbConnector.getDataRepository().getCategories().get(3));
         boolean success = appDbConnector.addFiche("pytanie", "odpowiedz", appDbConnector.getDataRepository().getLessons().get(0));
         if(success) {
             Button button = findViewById(R.id.start_learning_button);
-            button.setText(appDbConnector.getDataRepository().getLessons().get(0).getName());
+            button.setText(appDbConnector.getDataRepository().getCategories().get(3).getLessons().get(0).getName());
             //tested - working a little bit
             button.setOnClickListener(menuListiner);
         }

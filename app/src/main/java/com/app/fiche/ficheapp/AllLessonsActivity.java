@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class AllLessonsActivity extends AppCompatActivity {
 
@@ -19,7 +20,7 @@ public class AllLessonsActivity extends AppCompatActivity {
     private View.OnClickListener backToAddEditCategoryListiner = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Intent backToAddEditCategoryIntent = new Intent(getBaseContext(), AddEditCategoryActivity.class);
+            Intent backToAddEditCategoryIntent = new Intent(getBaseContext(), AllCategoriesActivity.class);
             startActivity(backToAddEditCategoryIntent);
             finish();
         }
@@ -32,9 +33,21 @@ public class AllLessonsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_lessons);
 
-
-        for (int i = 0; i < appDbConnector.getDataRepository().getLessons().size(); i++) {
-            lessonsStaff.addLesson(new LessonsDataBase(appDbConnector.getDataRepository().getLessons().get(i).getName()));
+        int passedCategory;
+        if (savedInstanceState == null) {
+            Bundle extras = getIntent().getExtras();
+            if (extras == null) {
+                passedCategory = -1;
+            } else {
+                passedCategory = extras.getInt("CATEGORY");
+            }
+        } else {
+            passedCategory = (Integer) savedInstanceState.getSerializable("CATEGORY");
+        }
+        appDbConnector.addLesson("TESTLESSON", "", appDbConnector.getDataRepository().getCategories().get(3));
+        //Toast.makeText(getBaseContext(), "fddf"+ appDbConnector.getDataRepository().getCategories().get(0).getName(), Toast.LENGTH_SHORT).show();
+        for (int i = 0; i < appDbConnector.getDataRepository().getCategories().get(3).getLessons().size(); i++) {
+            lessonsStaff.addLesson(new LessonsDataBase(appDbConnector.getDataRepository().getCategories().get(3).getLessons().get(i).getName()));
         }
 
         lessonsRecyclerView = findViewById(R.id.recycler_view_lessons);
