@@ -45,7 +45,7 @@ public class AllLessonsActivity extends AppCompatActivity {
             passedCategory = (Integer) savedInstanceState.getSerializable("CATEGORY");
         }
         appDbConnector.addLesson("TESTLESSON", "", appDbConnector.getDataRepository().getCategories().get(3));
-        //Toast.makeText(getBaseContext(), "fddf"+ appDbConnector.getDataRepository().getCategories().get(0).getName(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(getBaseContext(), "fddf" + appDbConnector.getDataRepository().getCategories().get(3).getName(), Toast.LENGTH_SHORT).show();
         for (int i = 0; i < appDbConnector.getDataRepository().getCategories().get(3).getLessons().size(); i++) {
             lessonsStaff.addLesson(new LessonsDataBase(appDbConnector.getDataRepository().getCategories().get(3).getLessons().get(i).getName()));
         }
