@@ -44,10 +44,11 @@ public class AllLessonsActivity extends AppCompatActivity {
         } else {
             passedCategory = (Integer) savedInstanceState.getSerializable("CATEGORY");
         }
-        appDbConnector.addLesson("TESTLESSON", "", appDbConnector.getDataRepository().getCategories().get(3));
-        Toast.makeText(getBaseContext(), "fddf" + appDbConnector.getDataRepository().getCategories().get(3).getName(), Toast.LENGTH_SHORT).show();
-        for (int i = 0; i < appDbConnector.getDataRepository().getCategories().get(3).getLessons().size(); i++) {
-            lessonsStaff.addLesson(new LessonsDataBase(appDbConnector.getDataRepository().getCategories().get(3).getLessons().get(i).getName()));
+        //adding lesson
+        //appDbConnector.addLesson("TESTLESSON", "", appDbConnector.getDataRepository().getCategories().get(0));
+        Toast.makeText(getBaseContext(), "Position " + appDbConnector.getDataRepository().getCategories().get(passedCategory - 1).getName(), Toast.LENGTH_SHORT).show();
+        for (int i = 0; i < appDbConnector.getDataRepository().getCategories().get(passedCategory - 1).getLessons().size(); i++) {
+            lessonsStaff.addLesson(new LessonsDataBase(appDbConnector.getDataRepository().getCategories().get(passedCategory - 1).getLessons().get(i).getName()));
         }
 
         lessonsRecyclerView = findViewById(R.id.recycler_view_lessons);

@@ -26,18 +26,17 @@ public class MenuActivity extends AppCompatActivity {
 
         //only for tests
         AppDbConnector appDbConnector = new AppDbConnector(getBaseContext());
-        appDbConnector.addCategory("Angielski");
+        //appDbConnector.addCategory("Angielski");
         appDbConnector.addCategory("Polski");
         appDbConnector.addCategory("Dom");
-        appDbConnector.addCategory("Kupeczka");
 
-        appDbConnector.addLesson("dom", "", appDbConnector.getDataRepository().getCategories().get(3));
-        boolean success = appDbConnector.addFiche("pytanie", "odpowiedz", appDbConnector.getDataRepository().getLessons().get(0));
-        if(success) {
+        //appDbConnector.addLesson("dom", "", appDbConnector.getDataRepository().getCategories().get(3));
+        //boolean success = appDbConnector.addFiche("pytanie", "odpowiedz", appDbConnector.getDataRepository().getLessons().get(0));
+        //if(success) {
             Button button = findViewById(R.id.start_learning_button);
-            button.setText(appDbConnector.getDataRepository().getCategories().get(3).getLessons().get(0).getName());
+        button.setText(R.string.start_learning);
             //tested - working a little bit
             button.setOnClickListener(menuListiner);
-        }
+        //}
     }
 }
